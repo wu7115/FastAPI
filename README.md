@@ -11,7 +11,7 @@ FastAPI TodoApp is a full-stack task management application built with FastAPI. 
 
 ## Technologies Used
 - **Backend**: FastAPI
-- **Database**: SQLAlchemy with SQLite
+- **Database**: SQLAlchemy with PostgreSQL and SQLite (just for testing)
 - **Migrations**: Alembic
 - **Frontend**: Jinja2 for templates
 - **Testing**: pytest
@@ -24,28 +24,22 @@ FastAPI TodoApp is a full-stack task management application built with FastAPI. 
    cd TodoApp
    ```
 
-2. Set up a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Initialize the database:
+3. Initialize the database:
    ```bash
    alembic upgrade head
    ```
 
-5. Run the application:
+4. Run the application:
    ```bash
    uvicorn main:app --reload
    ```
 
-6. Access the application at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+5. Access the application at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Project Structure
 ```
@@ -77,7 +71,6 @@ pytest
 ```
 
 ## Future Enhancements
-- Add user authentication and authorization.
 - Implement advanced task filtering and sorting options.
 - Deploy the application to a cloud service like AWS or Azure.
 
